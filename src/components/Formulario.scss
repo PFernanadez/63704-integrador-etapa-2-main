@@ -1,0 +1,15 @@
+.lbl {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    color: var(--c-lvdr);
+    
+    &__inpt {
+        background: rgba($color: #586AE2, $alpha: 0.5);
+        height: 3em;
+        border-style: none;
+        border-radius: 3px;
+    }
+
+
+}

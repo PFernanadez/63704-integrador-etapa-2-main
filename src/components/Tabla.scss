@@ -1,0 +1,18 @@
+table.tabla-alta {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 1rem auto;
+
+    th, td {
+        
+        padding: 8px;
+        text-align: left;
+        background-color: var(--c-lvdr);
+        opacity: 0.95;
+    }
+
+    th {
+        background-color: var(--c-rblu);
+        opacity: 0.95;
+    }
+}

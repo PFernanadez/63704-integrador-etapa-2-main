@@ -1,0 +1,46 @@
+.nav-bar {
+    width: 100%;
+    margin: 0 auto;
+
+    &__nav-list { 
+
+        display: flex;
+        list-style-type: none;
+        justify-content: center;
+
+
+        @media (max-width: 768px) {
+            & {
+                flex-direction: column;
+            }
+        }
+    }
+
+    &__nav-item {
+        text-align: center;
+    }
+
+    &__nav-link {
+        display: block;
+        color: var(--c-ltblu);
+        padding: 1em 2em;
+        text-decoration: none;
+        font-family: 'Raleway', sans-serif;
+        font-weight: bold;
+        font-size: 20px;
+        transition: 0.2s;
+    }
+
+    &__nav-link:hover {
+        background-color: var(--c-prpl);
+        box-shadow: 0px 0px 5px var(--c-prpl);
+        color: var(--c-lvdr);
+        transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+}

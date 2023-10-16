@@ -1,0 +1,142 @@
+button {
+    font: inherit;
+    margin-top: 0.5em;
+    padding: 0.75em 3em;
+    background: #5aa8cc;
+    border: 0.3em solid var(--c-ltblu);
+    border-radius: 100vw;
+    cursor: pointer;
+    transition: background-color 250ms;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    color: white;
+    font-weight: bolder;
+}
+
+button:hover,
+button:focus-visible {
+    background: hsl(199, 87%, 70%);
+}
+
+button > span {
+    position: absolute;
+    z-index:  -1;
+    width: 33.333%;
+    height: 100%;
+    background: transparent;
+    opacity: 0.5;
+}
+
+button > :first-child {
+    left: 0;
+    top: 0;
+}
+
+button > :last-child {
+    right: 0;
+    top: 0;
+}
+
+button::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: #5aa8cc;
+    width: 10%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    inset: 0;
+    margin: auto;
+    opacity: 0;
+    transition: transform 200ms, opacity 200ms;
+}
+
+button:active::before {
+    transform: scale(20);
+    opacity: 1; 
+    transition: transform 500ms, opacity 500ms;
+}
+
+
+.card {
+    outline: none;
+    width: 220px;
+    max-width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    background-color: var(--c-prpl);
+    box-shadow: 0 1px 5px rgba(0,0,0, .2), 0 0 3px rgba(0,0,0, .3);
+    color: transparent;
+    text-decoration: none;
+    transition: .2s;
+    transition: all .2s; 
+
+    &:hover, /* .card:hover */
+    &:focus {
+        transform: scale(1.03) skew(0);
+        transform-origin: bottom;
+        box-shadow: 0 0px 15px var(--c-prpl);
+        color: var(--c-lvdr);
+        text-shadow: 0px 0px 1px var(--c-lvdr);
+    }
+
+    &__image-container {
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+        height: 400px;
+        background-color: var(--c-mdnblu);
+        overflow: hidden; 
+        transition: 0.5s;
+    }
+
+    &:hover &__image-container,
+    &:focus &__image-container {
+        height: 200px;
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s;
+    }
+
+    &:hover &__image,
+    &:focus &__image {
+        transform: scale(1.2);
+        transform-origin: center;
+    }
+
+    &__content {
+        padding: 1em;
+    }
+
+    @media (min-width: 1024px) {
+        & { /* .card */
+            min-width: 240px;
+        }
+    }
+
+    @media (min-width: 426px) and (max-width: 768px) {
+        & {
+            min-width: 400px;
+            max-width: 500px;
+            height: 200px;
+        }
+
+        &__article { /* .card__article */
+            display: flex;
+        }
+
+        & &__image-container { /* .card .card_image-container */
+            width: 100em;
+            transition: 0.5s;
+        }
+
+        &:hover &__image-container, /* .card:hover .card__image-container  */
+        &:focus &__image-container { /* .card:focus .card__image-container */
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --c-ltblu: #6ECBF5;
+    --c-prpl: #C252E1;
+    --c-lvdr: #efedf7;
+    --c-rblu: #586AE2;
+    --c-mdnblu: #2A2356;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(110, 203, 245, 0.1),rgba(88, 106, 226, 0.1)),url(/img/background/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    font-family: 'Open Sans', sans-serif;
+}

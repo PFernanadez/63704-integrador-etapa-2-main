@@ -1,0 +1,17 @@
+.section-cards {
+    background-color: rgba(110, 203, 245, 0.5);
+    padding: 1em;
+
+    &__header{
+        color: var(--c-mdnblu);
+        margin-bottom: 1em;
+        text-align: center;
+    }
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+}
